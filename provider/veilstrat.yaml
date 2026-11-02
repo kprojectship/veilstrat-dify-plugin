@@ -1,0 +1,33 @@
+identity:
+  author: veilstrat
+  name: veilstrat
+  label:
+    en_US: VeilStrat
+  description:
+    en_US: Research company funding, AI hiring and technology adoption with VeilStrat.
+  icon: icon.svg
+  tags:
+  - business
+  - search
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: VeilStrat API Key
+    placeholder:
+      en_US: Enter your VeilStrat team API key
+    help:
+      en_US: Create a team key in Settings > API. Requires Pro and the API Access
+        add-on.
+    url: https://app.veilstrat.com/
+tools:
+- tools/search_companies.yaml
+- tools/get_company.yaml
+- tools/search_slices.yaml
+- tools/get_filters.yaml
+- tools/get_usage.yaml
+- tools/get_health.yaml
+extra:
+  python:
+    source: provider/veilstrat.py

@@ -1,0 +1,60 @@
+identity:
+  name: search_companies
+  author: veilstrat
+  label:
+    en_US: Search Companies
+description:
+  human:
+    en_US: Search one bounded page of companies using a supported VeilStrat signal
+      query. Inspect get_filters first; preserve pagination and request only needed
+      records.
+  llm: Search one bounded page of companies using a supported VeilStrat signal query.
+    Inspect get_filters first; preserve pagination and request only needed records.
+parameters:
+- name: signal_query
+  type: string
+  required: true
+  label:
+    en_US: Signal Query
+  human_description:
+    en_US: Supported query such as signal:hiring:30d. Discover other query rules with
+      get_filters.
+  llm_description: Supported query such as signal:hiring:30d. Discover other query
+    rules with get_filters.
+  form: llm
+- name: countries
+  type: string
+  required: false
+  label:
+    en_US: Countries
+  human_description:
+    en_US: Optional comma-separated two-letter country codes such as US,GB.
+  llm_description: Optional comma-separated two-letter country codes such as US,GB.
+  form: llm
+- name: page
+  type: number
+  required: false
+  label:
+    en_US: Page
+  human_description:
+    en_US: One-based page. Later pages use page-turn quota. No automatic pagination.
+  llm_description: One-based page. Later pages use page-turn quota. No automatic pagination.
+  form: llm
+  default: 1
+  min: 1
+  max: 500
+- name: page_size
+  type: number
+  required: false
+  label:
+    en_US: Page Size
+  human_description:
+    en_US: Maximum companies per page. Successful results consume record quota.
+  llm_description: Maximum companies per page. Successful results consume record quota.
+  form: llm
+  default: 10
+  min: 1
+  max: 50
+extra:
+  python:
+    source: tools/search_companies.py

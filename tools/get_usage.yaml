@@ -1,0 +1,15 @@
+identity:
+  name: get_usage
+  author: veilstrat
+  label:
+    en_US: Get Account Usage
+description:
+  human:
+    en_US: Inspect remaining API budgets and reset times. This operation is exempt
+      from the request budget.
+  llm: Inspect remaining API budgets and reset times. This operation is exempt from
+    the request budget.
+parameters: []
+extra:
+  python:
+    source: tools/get_usage.py

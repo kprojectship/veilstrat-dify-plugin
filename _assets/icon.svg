@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024"
+  role="img" aria-label="VeilStrat icon" fill="none">
+  <defs>
+    <linearGradient id="pinkGradIcon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F39AC0" />
+      <stop offset="100%" stop-color="#EA2C7F" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M322 180 C295 225 285 285 285 350 C285 440 320 500 340 550 C370 625 362 705 350 760 C340 810 315 855 285 900 C280 908 286 918 296 918 H414 C425 918 432 907 428 897 C405 844 392 792 392 735 C392 658 415 590 425 550 C441 487 441 435 438 387 C434 320 442 257 456 202 C459 190 451 180 439 180 Z"
+    fill="url(#pinkGradIcon)" />
+  <path
+    d="M702 180 C729 225 739 285 739 350 C739 440 704 500 684 550 C654 625 662 705 674 760 C684 810 709 855 739 900 C744 908 738 918 728 918 H610 C599 918 592 907 596 897 C619 844 632 792 632 735 C632 658 609 590 599 550 C583 487 583 435 586 387 C590 320 582 257 568 202 C565 190 573 180 585 180 Z"
+    fill="url(#pinkGradIcon)" />
+  <circle cx="512" cy="512" r="68" stroke="#EE4C91" stroke-width="11" />
+  <circle cx="512" cy="512" r="38" fill="#E92573" />
+</svg>

@@ -1,0 +1,46 @@
+identity:
+  name: search_slices
+  author: veilstrat
+  label:
+    en_US: Search Signal Slices
+description:
+  human:
+    en_US: Retrieve one filtered signal slice. Get slice identifiers from get_filters.
+      Scores prioritize research and do not predict purchases.
+  llm: Retrieve one filtered signal slice. Get slice identifiers from get_filters.
+    Scores prioritize research and do not predict purchases.
+parameters:
+- name: slice
+  type: string
+  required: true
+  label:
+    en_US: Slice
+  human_description:
+    en_US: Supported slice identifier from the current filter catalog, such as ai-sdr-hiring.
+  llm_description: Supported slice identifier from the current filter catalog, such
+    as ai-sdr-hiring.
+  form: llm
+- name: countries
+  type: string
+  required: false
+  label:
+    en_US: Countries
+  human_description:
+    en_US: Optional comma-separated two-letter country codes such as US,GB.
+  llm_description: Optional comma-separated two-letter country codes such as US,GB.
+  form: llm
+- name: score_min
+  type: number
+  required: false
+  label:
+    en_US: Minimum Score
+  human_description:
+    en_US: Minimum prioritization score from 0 to 100.
+  llm_description: Minimum prioritization score from 0 to 100.
+  form: llm
+  default: 70
+  min: 0
+  max: 100
+extra:
+  python:
+    source: tools/search_slices.py

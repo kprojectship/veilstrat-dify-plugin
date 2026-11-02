@@ -1,0 +1,15 @@
+identity:
+  name: get_health
+  author: veilstrat
+  label:
+    en_US: Check API Connection
+description:
+  human:
+    en_US: Check VeilStrat API connectivity. This operation is exempt from the request
+      budget.
+  llm: Check VeilStrat API connectivity. This operation is exempt from the request
+    budget.
+parameters: []
+extra:
+  python:
+    source: tools/get_health.py

@@ -1,0 +1,15 @@
+identity:
+  name: get_filters
+  author: veilstrat
+  label:
+    en_US: Get Filter Catalog
+description:
+  human:
+    en_US: Discover supported query rules, technology identifiers and signal slices
+      before searching.
+  llm: Discover supported query rules, technology identifiers and signal slices before
+    searching.
+parameters: []
+extra:
+  python:
+    source: tools/get_filters.py

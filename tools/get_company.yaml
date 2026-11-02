@@ -1,0 +1,23 @@
+identity:
+  name: get_company
+  author: veilstrat
+  label:
+    en_US: Get Company Dossier
+description:
+  human:
+    en_US: Retrieve a company dossier using a UUID returned by search or a VeilStrat
+      webhook.
+  llm: Retrieve a company dossier using a UUID returned by search or a VeilStrat webhook.
+parameters:
+- name: company_id
+  type: string
+  required: true
+  label:
+    en_US: Company ID
+  human_description:
+    en_US: Company UUID returned by search or a VeilStrat webhook.
+  llm_description: Company UUID returned by search or a VeilStrat webhook.
+  form: llm
+extra:
+  python:
+    source: tools/get_company.py
